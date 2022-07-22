@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="610.0" prefWidth="530.0" style="-fx-border-color: #c1c1c1;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="119.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Targa:" textAlignment="RIGHT" wrappingWidth="50.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TextField fx:id="targa" disable="true" editable="false" layoutX="176.0" layoutY="34.0" prefHeight="28.0" prefWidth="230.0" promptText="Es. AG500ME">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextArea fx:id="nota" disable="true" layoutX="38.0" layoutY="202.0" prefHeight="330.0" prefWidth="450.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextArea>
+      <Text layoutX="39.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Note:" wrappingWidth="210.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="salvaButton" buttonType="RAISED" layoutX="417.0" layoutY="550.0" onAction="#salva" style="-fx-background-color: #f0f0f0 #f0f0f0;" text="Salva">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXRadioButton fx:id="utilizzabileToggle" layoutX="66.0" layoutY="111.0" text="Utilizzabile">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="visionareToggle" layoutX="205.0" layoutY="111.0" text="Da visionare">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="gustoToggle" layoutX="367.0" layoutY="111.0" text="Guasto">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXRadioButton>
+   </children>
+</AnchorPane>

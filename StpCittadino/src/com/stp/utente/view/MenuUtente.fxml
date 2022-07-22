@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import jfxtras.scene.control.ImageViewButton?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <AnchorPane fx:id="backgroundPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageViewButton fx:id="cercaPercorsoButton" layoutX="98.0" layoutY="400.0" onMouseClicked="#cercaPercorso">
+               <image>
+                  <Image url="@../../../../../res/img/cercaPercorso.png" />
+               </image>
+            </ImageViewButton>
+            <ImageViewButton fx:id="cercaLineaButton" layoutX="464.0" layoutY="400.0" onMouseClicked="#cercaLinea">
+               <image>
+                  <Image url="@../../../../../res/img/cercaLinea.png" />
+               </image>
+            </ImageViewButton>
+            <ImageViewButton fx:id="cercaFermataButton" layoutX="824.0" layoutY="400.0" onMouseClicked="#cercaFermata">
+               <image>
+                  <Image url="@../../../../../res/img/cercaFermata.png" />
+               </image>
+            </ImageViewButton>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

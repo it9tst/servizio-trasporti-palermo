@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="800.0" prefWidth="1200.0" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="670.0" prefWidth="1200.0">
+               <children>
+                  <AnchorPane prefHeight="450.0" prefWidth="1100.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <JFXButton fx:id="aggiungiAutobusButton" buttonType="RAISED" onAction="#aggiungiAutobus" style="-fx-background-color: #f0f0f0 #f0f0f0;" text="Aggiungi Autobus" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="15.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font></JFXButton>
+                        <JFXTextField fx:id="cercaAutobus" prefHeight="20.0" prefWidth="230.0" AnchorPane.leftAnchor="55.0" AnchorPane.topAnchor="15.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font></JFXTextField>
+                        <JFXButton fx:id="cercaAutobusButton" buttonType="RAISED" onAction="#cercaAutobus" style="-fx-background-color: #f0f0f0 #f0f0f0;" text="Cerca" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="15.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="15.0">
+                           <image>
+                              <Image url="@/img/cerca.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <JFXTreeTableView fx:id="table" accessibleRole="BUTTON" blendMode="SRC_ATOP" editable="true" onMouseClicked="#visualizzaAutobus" pickOnBounds="false" prefHeight="1000.0" prefWidth="1077.0" showRoot="false" stylesheets="@/css/style.css">
+                     <columnResizePolicy>
+                        <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" />
+                     </VBox.margin>
+                  </JFXTreeTableView>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="80.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="indietroButton" buttonType="RAISED" onAction="#menuDipendente" style="-fx-background-color: #f0f0f0 #f0f0f0;" text="Indietro" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font size="15.0" />
+               </font></JFXButton>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <top>
+      <HBox prefHeight="50.0" style="-fx-border-width: 0 0 2 0; -fx-border-color: #a1a1a1;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" y="20.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="15.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="usernameDipendente" layoutX="5.0" strokeType="OUTSIDE" strokeWidth="0.0" x="105.0" y="20.0" AnchorPane.topAnchor="15.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Circle fx:id="timbro" fill="#01ab00" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="17.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

@@ -1,0 +1,8 @@
+com.stp.dipendente
+com.stp.dipendente.amministrativo.control
+com.stp.dipendente.control
+com.stp.dipendente.deposito.control
+com.stp.dipendente.logistica.control
+com.stp.dipendente.model
+com.stp.dipendente.util
+com.stp.dipendente.util.json

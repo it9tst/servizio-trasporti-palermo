@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="res"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
+	<classpathentry kind="lib" path="res/libs/googleservice/google-maps-services-0.2.6.jar"/>
+	<classpathentry kind="lib" path="res/libs/googleservice/gson-2.8.1.jar"/>
+	<classpathentry kind="lib" path="res/libs/googleservice/joda-time-2.9.9.jar"/>
+	<classpathentry kind="lib" path="res/libs/googleservice/okhttp-3.8.1.jar"/>
+	<classpathentry kind="lib" path="res/libs/googleservice/okio-1.13.0.jar"/>
+	<classpathentry kind="lib" path="res/libs/googleservice/slf4j-api-1.7.25.jar"/>
+	<classpathentry kind="lib" path="res/libs/googleservice/slf4j-api-1.8.0-beta1.jar"/>
+	<classpathentry kind="lib" path="res/libs/GMapsFX-2.12.0.jar"/>
+	<classpathentry kind="lib" path="res/libs/jfxtras.jar"/>
+	<classpathentry kind="lib" path="res/libs/jfoenix-8.0.1.jar"/>
+	<classpathentry kind="lib" path="res/libs/reactfx-2.0-M5.jar"/>
+	<classpathentry kind="lib" path="res/libs/itextpdf-5.4.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

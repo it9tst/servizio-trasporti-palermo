@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="root" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.stp.dipendente.control.VisualizzaAutobusControl">
+   <top>
+      <HBox prefHeight="50.0" prefWidth="800.0" style="-fx-border-width: 0 0 2 0; -fx-border-color: #a1a1a1;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" y="20.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="15.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="usernameDipendente" layoutX="5.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" x="105.0" y="20.0" AnchorPane.topAnchor="15.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Circle fx:id="timbro" fill="#01ab00" layoutX="17.0" layoutY="24.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="17.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="38.0" prefWidth="102.0" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="80.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="modificaAutobusButton" alignment="CENTER_RIGHT" buttonType="RAISED" contentDisplay="RIGHT" onAction="#modificaAutobus" style="-fx-background-color: #f0f0f0;" text="Modifica" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="indietroButton" alignment="CENTER_RIGHT" buttonType="RAISED" contentDisplay="RIGHT" layoutX="10.0" layoutY="10.0" onAction="#gestioneAutobus" style="-fx-background-color: #f0f0f0;" text="Indietro" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+         </children></AnchorPane>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="470.0" prefWidth="800.0">
+               <children>
+                  <AnchorPane prefHeight="470.0" prefWidth="400.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Text layoutX="134.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Targa:" textAlignment="RIGHT" wrappingWidth="50.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Text>
+                        <TextField fx:id="targa" disable="true" editable="false" layoutX="203.0" layoutY="64.0" prefHeight="28.0" prefWidth="230.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font></TextField>
+                        <Text layoutX="82.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Posti seduti:" textAlignment="RIGHT" wrappingWidth="102.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Text>
+                        <TextField fx:id="postiSeduti" disable="true" editable="false" layoutX="203.0" layoutY="104.0" prefHeight="28.0" prefWidth="230.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font></TextField>
+                        <Text layoutX="81.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Posti in piedi:" textAlignment="RIGHT" wrappingWidth="103.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Text>
+                        <TextField fx:id="postiInPiedi" disable="true" editable="false" layoutX="203.0" layoutY="144.0" prefHeight="28.0" prefWidth="230.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font></TextField>
+                        <Text layoutX="55.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Posti per disabili:" textAlignment="RIGHT" wrappingWidth="129.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Text>
+                        <TextField fx:id="postiPerDisabili" disable="true" editable="false" layoutX="203.0" layoutY="184.0" prefHeight="28.0" prefWidth="230.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font></TextField>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

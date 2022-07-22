@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import jfxtras.scene.control.ImageViewButton?>
+<?import jfxtras.scene.control.agenda.Agenda?>
+
+<BorderPane maxHeight="800.0" maxWidth="1200.0" minHeight="800.0" minWidth="1200.0" prefHeight="800.0" prefWidth="1200.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141">
+   <bottom>
+      <AnchorPane prefHeight="80.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="indietroButton" buttonType="RAISED" layoutX="64.0" layoutY="27.0" onAction="#menuDipendente" style="-fx-background-color: #f0f0f0;" text="Indietro" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+         </children></AnchorPane>
+   </bottom>
+   <top>
+      <AnchorPane prefHeight="50.0" prefWidth="1200.0" style="-fx-border-width: 0 0 2 0; -fx-border-color: #a1a1a1;" BorderPane.alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="15.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="usernameDipendente" layoutX="5.0" strokeType="OUTSIDE" strokeWidth="0.0" x="105.0" y="20.0" AnchorPane.topAnchor="15.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Circle fx:id="timbro" fill="#01ab00" layoutX="14.0" layoutY="24.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="17.0" />
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane fx:id="parentStackPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane prefHeight="50.0" prefWidth="1200.0" />
+                  <AnchorPane prefHeight="200.0" prefWidth="1200.0">
+                     <children>
+                        <Agenda fx:id="agendaid" allowDragging="false" allowResize="false" prefHeight="620.0" prefWidth="1000.0" style="-fx-border-color: #a1a1a1; -fx-border-width: 2 2 2 2;" stylesheets="@/css/style.css" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" />
+                        <ImageViewButton fitHeight="40.0" fitWidth="40.0" onMouseClicked="#indietroWeek" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="260.0">
+                           <image>
+                              <Image url="@/img/frecciaSinistra.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D height="55.0" minX="20.0" minY="20.0" width="55.0" />
+                           </viewport>
+                        </ImageViewButton>
+                        <ImageViewButton fitHeight="40.0" fitWidth="40.0" layoutX="1123.0" layoutY="260.0" onMouseClicked="#avantiWeek" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="260.0">
+                           <image>
+                              <Image url="@/img/frecciaDestra.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D height="55.0" minX="20.0" minY="20.0" width="55.0" />
+                           </viewport>
+                        </ImageViewButton>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

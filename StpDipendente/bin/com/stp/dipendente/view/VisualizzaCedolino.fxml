@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141">
+   <bottom>
+      <AnchorPane prefHeight="80.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="indietroButton" buttonType="RAISED" onAction="#menuDipendente" style="-fx-background-color: #f0f0f0 #f0f0f0;" text="Indietro" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font size="15.0" />
+               </font></JFXButton>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <top>
+      <HBox prefHeight="50.0" prefWidth="600.0" style="-fx-border-width: 0 0 2 0; -fx-border-color: #a1a1a1;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" y="20.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="15.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="usernameDipendente" layoutX="5.0" strokeType="OUTSIDE" strokeWidth="0.0" x="105.0" y="20.0" AnchorPane.topAnchor="15.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Circle fx:id="timbro" fill="#01ab00" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="17.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <AnchorPane fx:id="parentStackPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane prefHeight="470.0" prefWidth="150.0" />
+                  <VBox prefHeight="470.0" prefWidth="722.0">
+                     <children>
+                        <AnchorPane prefHeight="25.0" prefWidth="615.0" />
+                        <JFXTreeTableView fx:id="table" accessibleRole="BUTTON" blendMode="SRC_ATOP" editable="true" pickOnBounds="false" prefHeight="449.0" prefWidth="648.0" showRoot="false">
+                           <columnResizePolicy>
+                              <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </JFXTreeTableView>
+                     </children>
+                  </VBox>
+                  <AnchorPane prefHeight="200.0" prefWidth="150.0" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

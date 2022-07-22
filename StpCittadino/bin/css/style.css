@@ -1,0 +1,17 @@
+#backgroundPane{
+    -fx-background-image: url("@/../../img/back1.png");
+}
+
+#backgroundPane2{
+    -fx-background-image: url("@/../../img/back2.png");
+}
+
+#tab{
+	-fx-background-image: url("@/../../img/backTable.png");
+	-fx-background-color: #D7EFE8;
+	-fx-border-color: #c1c1c1;
+}
+
+.scroll-pane > .viewport {
+   -fx-background-color: transparent;
+}

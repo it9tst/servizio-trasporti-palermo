@@ -1,0 +1,1587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import java.util.ArrayList?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <bottom>
+      <AnchorPane prefHeight="80.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="salvaButton" buttonType="RAISED" onAction="#salva" style="-fx-background-color: #f0f0f0 #f0f0f0;" text="Salva" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="annullaButton" buttonType="RAISED" layoutX="10.0" layoutY="10.0" onAction="#annulla" style="-fx-background-color: #f0f0f0 #f0f0f0;" text="Annulla" AnchorPane.rightAnchor="140.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+         </children></AnchorPane>
+   </bottom>
+   <center>
+      <VBox prefHeight="670.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="70.0" prefWidth="800.0">
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" />
+               </VBox.margin>
+               <children>
+                  <Text layoutX="35.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CEDOLINO DIPENDENTE" y="20.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="parentStackPane" prefHeight="550.0" prefWidth="800.0">
+               <children>
+                  <ScrollPane prefHeight="3465.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="2740.0" prefWidth="1182.0" style="-fx-background-color: #f0f0f0;">
+                           <children>
+                              <Text layoutX="40.0" layoutY="209.66796875" strokeType="OUTSIDE" strokeWidth="0.0" text="CODICE DIPENDENTE" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="1038.6552734375">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="idDipendente" layoutX="39.0" layoutY="213.0" prefHeight="29.0" prefWidth="130.0" AnchorPane.leftAnchor="39.0" AnchorPane.rightAnchor="1013.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="200.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOME" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="952.1708984375">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="nomeDipendente" layoutX="199.0" layoutY="213.0" prefHeight="29.0" prefWidth="160.0" AnchorPane.leftAnchor="199.0" AnchorPane.rightAnchor="823.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="386.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COGNOME" AnchorPane.leftAnchor="386.0" AnchorPane.rightAnchor="743.8369140625">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="cognomeDipendente" layoutX="385.0" layoutY="213.0" prefHeight="29.0" prefWidth="160.0" AnchorPane.leftAnchor="385.0" AnchorPane.rightAnchor="637.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="579.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CODICE FISCALE" AnchorPane.leftAnchor="579.0" AnchorPane.rightAnchor="521.955078125">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="codiceFiscaleDipendente" layoutX="578.0" layoutY="213.0" prefHeight="29.0" prefWidth="190.0" AnchorPane.leftAnchor="578.0" AnchorPane.rightAnchor="414.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="800.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NATO A" AnchorPane.leftAnchor="800.0" AnchorPane.rightAnchor="344.2314453125">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="luogoNascitaDipendente" layoutX="799.0" layoutY="213.0" prefHeight="29.0" prefWidth="160.0" AnchorPane.leftAnchor="799.0" AnchorPane.rightAnchor="223.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="991.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IL" AnchorPane.leftAnchor="991.0" AnchorPane.rightAnchor="182.6455078125">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="dataNascitaDipendente" layoutX="990.0" layoutY="213.0" prefHeight="29.0" prefWidth="130.0" AnchorPane.leftAnchor="990.0" AnchorPane.rightAnchor="62.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="40.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CODICE DITTA" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="1071.9072265625">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="codiceDitta" layoutX="39.0" layoutY="43.0" prefHeight="29.0" prefWidth="130.0" AnchorPane.leftAnchor="39.0" AnchorPane.rightAnchor="1013.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="200.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="POS. INAIL" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="930.583984375">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="posInail" layoutX="199.0" layoutY="43.0" prefHeight="29.0" prefWidth="154.0" AnchorPane.leftAnchor="199.0" AnchorPane.rightAnchor="829.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="541.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MESE DI RETRIBUZIONE" AnchorPane.leftAnchor="541.0" AnchorPane.rightAnchor="525.9609375">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="381.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="POS. INPS" AnchorPane.leftAnchor="381.0" AnchorPane.rightAnchor="751.9521484375">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="posInps" layoutX="380.0" layoutY="43.0" prefHeight="29.0" prefWidth="130.0" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="672.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="40.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INDIRIZZO" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="1091.814453125">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="indirizzoDipendente" layoutX="39.0" layoutY="283.0" prefHeight="29.0" prefWidth="230.0" AnchorPane.leftAnchor="39.0" AnchorPane.rightAnchor="913.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="296.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CAP" AnchorPane.leftAnchor="296.0" AnchorPane.rightAnchor="865.7509765625">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="capDipendente" layoutX="295.0" layoutY="283.0" prefHeight="29.0" prefWidth="130.0" AnchorPane.leftAnchor="295.0" AnchorPane.rightAnchor="757.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="461.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LUOGO DI RESIDENZA" AnchorPane.leftAnchor="461.0" AnchorPane.rightAnchor="613.880859375">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="luogoResidenzaDipendente" layoutX="460.0" layoutY="283.0" prefHeight="29.0" prefWidth="160.0" AnchorPane.leftAnchor="460.0" AnchorPane.rightAnchor="562.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="650.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROVINCIA DI RESIDENZA" AnchorPane.leftAnchor="650.0" AnchorPane.rightAnchor="406.8828125">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="provinciaResidenzaDipendente" layoutX="649.0" layoutY="283.0" prefHeight="29.0" prefWidth="160.0" AnchorPane.leftAnchor="649.0" AnchorPane.rightAnchor="373.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="839.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SEDE DI LAVORO" AnchorPane.leftAnchor="839.0" AnchorPane.rightAnchor="260.763671875">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="sedeLavoro" layoutX="838.0" layoutY="283.0" prefHeight="29.0" prefWidth="160.0" AnchorPane.leftAnchor="838.0" AnchorPane.rightAnchor="184.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="40.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ASSUNZIONE" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="1077.2734375">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="dataAssunzioneDipendente" layoutX="39.0" layoutY="353.0" prefHeight="29.0" prefWidth="160.0" AnchorPane.leftAnchor="39.0" AnchorPane.rightAnchor="983.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="226.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ANZ. SERVIZIO - ANNI" AnchorPane.leftAnchor="226.0" AnchorPane.rightAnchor="849.53515625">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="anzianitaServAnni" layoutX="225.0" layoutY="353.0" prefHeight="29.0" prefWidth="160.0" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="797.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="414.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ANZ. SERVIZIO - MESI" AnchorPane.leftAnchor="414.0" AnchorPane.rightAnchor="662.0478515625">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="anzianitaServMesi" layoutX="413.0" layoutY="353.0" prefHeight="29.0" prefWidth="160.0" AnchorPane.leftAnchor="413.0" AnchorPane.rightAnchor="609.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="601.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SCADENZA CONTRATTO" AnchorPane.leftAnchor="601.0" AnchorPane.rightAnchor="461.6298828125">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="scadenzaContratto" layoutX="600.0" layoutY="353.0" prefHeight="29.0" prefWidth="160.0" AnchorPane.leftAnchor="600.0" AnchorPane.rightAnchor="422.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="787.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FINE RAPPORTO" AnchorPane.leftAnchor="787.0" AnchorPane.rightAnchor="316.1328125">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="fineRapporto" layoutX="786.0" layoutY="353.0" prefHeight="29.0" prefWidth="160.0" AnchorPane.leftAnchor="786.0" AnchorPane.rightAnchor="236.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="975.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONTRATTO DI LAVORO" AnchorPane.leftAnchor="975.0" AnchorPane.rightAnchor="88.025390625">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="contrattoDiLavoro" layoutX="974.0" layoutY="352.0" prefHeight="29.0" prefWidth="160.0" AnchorPane.leftAnchor="974.0" AnchorPane.rightAnchor="48.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="41.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DESCRIZIONE QUALIFICA" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="1019.30078125">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="ruoloDipendente" layoutX="40.0" layoutY="422.0" prefHeight="29.0" prefWidth="160.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="982.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="227.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\% PART TIME" AnchorPane.leftAnchor="227.0" AnchorPane.rightAnchor="891.8212890625">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="percentualePartTime" layoutX="226.0" layoutY="421.0" prefHeight="29.0" prefWidth="160.0" AnchorPane.leftAnchor="226.0" AnchorPane.rightAnchor="796.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="40.0" layoutY="538.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RETR. BASE" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="1085.2080078125">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="retribuzioneBase" layoutX="39.0" layoutY="541.0" prefHeight="29.0" prefWidth="160.0" AnchorPane.leftAnchor="39.0" AnchorPane.rightAnchor="983.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="225.0" layoutY="537.77734375" strokeType="OUTSIDE" strokeWidth="0.0" text="IND. CONTING." AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="884.6904296875">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="indConting" layoutX="224.0" layoutY="541.0" prefHeight="29.0" prefWidth="160.0" AnchorPane.leftAnchor="224.0" AnchorPane.rightAnchor="798.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="416.0" layoutY="538.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TERZO ELEM." AnchorPane.leftAnchor="416.0" AnchorPane.rightAnchor="700.7216796875">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="terzoElemento" layoutX="415.0" layoutY="541.0" prefHeight="29.0" prefWidth="160.0" AnchorPane.leftAnchor="415.0" AnchorPane.rightAnchor="607.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Separator layoutY="483.0" prefHeight="12.0" prefWidth="1182.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                              <Separator layoutY="513.0" prefHeight="12.0" prefWidth="1182.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                              <Text fill="#9a9a9a" layoutX="510.0" layoutY="508.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ELEMENTI RETRIBUZIONE" AnchorPane.leftAnchor="510.0" AnchorPane.rightAnchor="510.82666015625" />
+                              <Separator layoutY="600.0" prefHeight="12.0" prefWidth="1182.0" />
+                              <Separator layoutY="630.0" prefHeight="12.0" prefWidth="1182.0" />
+                              <Text fill="#9a9a9a" layoutX="554.0" layoutY="625.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FERIE (ORE)" />
+                              <Text layoutX="37.0" layoutY="655.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GODUTI">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="ferieOre" layoutX="36.0" layoutY="658.0" prefHeight="29.0" prefWidth="160.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Separator layoutY="717.0" prefHeight="12.0" prefWidth="1182.0" />
+                              <Separator layoutY="747.0" prefHeight="12.0" prefWidth="1182.0" />
+                              <Text fill="#9a9a9a" layoutX="539.0" layoutY="742.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MALATTIA (ORE)" textAlignment="CENTER" />
+                              <Text layoutX="37.0" layoutY="771.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GODUTI">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="malattiaOre" layoutX="36.0" layoutY="774.0" prefHeight="29.0" prefWidth="160.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Separator layoutX="1.0" layoutY="155.0" prefHeight="12.0" prefWidth="1182.0" />
+                              <Separator layoutX="1.0" layoutY="185.0" prefHeight="12.0" prefWidth="1182.0" />
+                              <Text fill="#9a9a9a" layoutX="496.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATI PERSONALI DIPENDENTE" />
+                              <Separator layoutY="843.0" prefHeight="12.0" prefWidth="1182.0" />
+                              <Separator layoutY="873.0" prefHeight="12.0" prefWidth="1182.0" />
+                              <Text fill="#9a9a9a" layoutX="533.0" layoutY="868.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATI PAGAMENTO" textAlignment="CENTER" />
+                              <Text layoutX="37.0" layoutY="897.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MODALITA' PAGAMENTO">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="modalitaPagamento" layoutX="36.0" layoutY="900.0" prefHeight="29.0" prefWidth="160.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="222.0" layoutY="897.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RIFERIMENTI BANCARI">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="ibanDipendente" layoutX="221.0" layoutY="900.0" prefHeight="29.0" prefWidth="290.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Separator layoutY="960.0" prefHeight="12.0" prefWidth="1182.0" />
+                              <Separator layoutY="990.0" prefHeight="12.0" prefWidth="1182.0" />
+                              <Text fill="#9a9a9a" layoutX="512.0" layoutY="985.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RETRIBUZIONE MASSIMA" textAlignment="CENTER" />
+                              <Text layoutX="37.0" layoutY="1014.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SETT. RETR.">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="settRetr" layoutX="36.0" layoutY="1017.0" prefHeight="29.0" prefWidth="160.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="222.0" layoutY="1014.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GG. RETRIBUITI">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="ggRetribuiti" layoutX="221.0" layoutY="1017.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="403.0" layoutY="1013.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GG. LAVORATI">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="giorniLavorati" layoutX="402.0" layoutY="1016.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="588.0" layoutY="1013.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ORE LAVORATE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="oreLavorate" layoutX="587.0" layoutY="1016.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="38.0" layoutY="1085.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RETRIBUZIONE ORARIA">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="retribuzioneOraria" layoutX="37.0" layoutY="1088.0" prefHeight="29.0" prefWidth="160.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="223.0" layoutY="1085.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RETRIBUZIONE GIORNALIERA">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="retribuzioneGiornaliera" layoutX="222.0" layoutY="1088.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="404.0" layoutY="1084.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RETRIBUZIONE MENSILE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="retribuzioneMensile" layoutX="403.0" layoutY="1087.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Separator layoutY="1149.0" prefHeight="12.0" prefWidth="1182.0" />
+                              <Separator layoutY="1179.0" prefHeight="12.0" prefWidth="1182.0" />
+                              <Text fill="#9a9a9a" layoutX="330.0" layoutY="1174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VOCI RETRIBUZIONE (C - Imponibile contributivo; N - Considerato nel netto in busta)" textAlignment="CENTER" />
+                              <Text layoutX="37.0" layoutY="1203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VOCE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="voce1" layoutX="36.0" layoutY="1206.0" prefHeight="29.0" prefWidth="70.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="140.0" layoutY="1202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DESCRIZIONE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="descrizione1" layoutX="139.0" layoutY="1205.0" prefHeight="29.0" prefWidth="215.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="393.0" layoutY="1202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UNITA' DI MISURA">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="unitaMisura1" layoutX="392.0" layoutY="1205.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="531.0" layoutY="1202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QUANTITA'">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="quantita1" layoutX="530.0" layoutY="1205.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="673.0" layoutY="1202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BASE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="base1" layoutX="672.0" layoutY="1205.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="818.0" layoutY="1202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRATTENUTE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="trattenute1" layoutX="817.0" layoutY="1205.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="957.0" layoutY="1202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COMPETENZE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="competenze1" layoutX="956.0" layoutY="1205.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="37.0" layoutY="1255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VOCE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="voce2" layoutX="36.0" layoutY="1258.0" prefHeight="29.0" prefWidth="70.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="140.0" layoutY="1254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DESCRIZIONE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="descrizione2" layoutX="139.0" layoutY="1257.0" prefHeight="29.0" prefWidth="215.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="393.0" layoutY="1254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UNITA' DI MISURA">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="unitaMisura2" layoutX="392.0" layoutY="1257.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="531.0" layoutY="1254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QUANTITA'">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="quantita2" layoutX="530.0" layoutY="1257.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="673.0" layoutY="1254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BASE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="base2" layoutX="672.0" layoutY="1257.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="818.0" layoutY="1254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRATTENUTE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="trattenute2" layoutX="817.0" layoutY="1257.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="957.0" layoutY="1254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COMPETENZE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="competenze2" layoutX="956.0" layoutY="1257.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="38.0" layoutY="1306.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VOCE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="voce3" layoutX="37.0" layoutY="1309.0" prefHeight="29.0" prefWidth="70.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="141.0" layoutY="1305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DESCRIZIONE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="descrizione3" layoutX="140.0" layoutY="1308.0" prefHeight="29.0" prefWidth="215.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="394.0" layoutY="1305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UNITA' DI MISURA">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="unitaMisura3" layoutX="393.0" layoutY="1308.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="532.0" layoutY="1305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QUANTITA'">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="quantita3" layoutX="531.0" layoutY="1308.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="674.0" layoutY="1305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BASE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="base3" layoutX="673.0" layoutY="1308.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="819.0" layoutY="1305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRATTENUTE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="trattenute3" layoutX="818.0" layoutY="1308.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="958.0" layoutY="1305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COMPETENZE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="competenze3" layoutX="957.0" layoutY="1308.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="38.0" layoutY="1358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VOCE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="voce4" layoutX="37.0" layoutY="1361.0" prefHeight="29.0" prefWidth="70.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="141.0" layoutY="1357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DESCRIZIONE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="descrizione4" layoutX="140.0" layoutY="1360.0" prefHeight="29.0" prefWidth="215.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="394.0" layoutY="1357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UNITA' DI MISURA">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="unitaMisura4" layoutX="393.0" layoutY="1360.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="532.0" layoutY="1357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QUANTITA'">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="quantita4" layoutX="531.0" layoutY="1360.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="674.0" layoutY="1357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BASE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="base4" layoutX="673.0" layoutY="1360.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="819.0" layoutY="1357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRATTENUTE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="trattenute4" layoutX="818.0" layoutY="1360.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="958.0" layoutY="1357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COMPETENZE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="competenze4" layoutX="957.0" layoutY="1360.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="38.0" layoutY="1409.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VOCE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="voce5" layoutX="37.0" layoutY="1412.0" prefHeight="29.0" prefWidth="70.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="141.0" layoutY="1408.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DESCRIZIONE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="descrizione5" layoutX="140.0" layoutY="1411.0" prefHeight="29.0" prefWidth="215.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="394.0" layoutY="1408.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UNITA' DI MISURA">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="unitaMisura5" layoutX="393.0" layoutY="1411.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="532.0" layoutY="1408.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QUANTITA'">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="quantita5" layoutX="531.0" layoutY="1411.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="674.0" layoutY="1408.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BASE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="base5" layoutX="673.0" layoutY="1411.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="819.0" layoutY="1408.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRATTENUTE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="trattenute5" layoutX="818.0" layoutY="1411.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="958.0" layoutY="1408.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COMPETENZE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="competenze5" layoutX="957.0" layoutY="1411.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="38.0" layoutY="1461.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VOCE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="voce6" layoutX="37.0" layoutY="1464.0" prefHeight="29.0" prefWidth="70.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="141.0" layoutY="1460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DESCRIZIONE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="descrizione6" layoutX="140.0" layoutY="1463.0" prefHeight="29.0" prefWidth="215.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="394.0" layoutY="1460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UNITA' DI MISURA">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="unitaMisura6" layoutX="393.0" layoutY="1463.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="532.0" layoutY="1460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QUANTITA'">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="quantita6" layoutX="531.0" layoutY="1463.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="674.0" layoutY="1460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BASE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="base6" layoutX="673.0" layoutY="1463.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="819.0" layoutY="1460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRATTENUTE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="trattenute6" layoutX="818.0" layoutY="1463.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="958.0" layoutY="1460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COMPETENZE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="competenze6" layoutX="957.0" layoutY="1463.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="39.0" layoutY="1512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VOCE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="voce7" layoutX="38.0" layoutY="1515.0" prefHeight="29.0" prefWidth="70.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="142.0" layoutY="1511.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DESCRIZIONE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="descrizione7" layoutX="141.0" layoutY="1514.0" prefHeight="29.0" prefWidth="215.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="395.0" layoutY="1511.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UNITA' DI MISURA">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="unitaMisura7" layoutX="394.0" layoutY="1514.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="533.0" layoutY="1511.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QUANTITA'">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="quantita7" layoutX="532.0" layoutY="1514.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="675.0" layoutY="1511.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BASE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="base7" layoutX="674.0" layoutY="1514.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="820.0" layoutY="1511.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRATTENUTE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="trattenute7" layoutX="819.0" layoutY="1514.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="959.0" layoutY="1511.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COMPETENZE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="competenze7" layoutX="958.0" layoutY="1514.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="39.0" layoutY="1564.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VOCE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="voce8" layoutX="38.0" layoutY="1567.0" prefHeight="29.0" prefWidth="70.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="142.0" layoutY="1563.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DESCRIZIONE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="descrizione8" layoutX="141.0" layoutY="1566.0" prefHeight="29.0" prefWidth="215.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="395.0" layoutY="1563.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UNITA' DI MISURA">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="unitaMisura8" layoutX="394.0" layoutY="1566.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="533.0" layoutY="1563.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QUANTITA'">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="quantita8" layoutX="532.0" layoutY="1566.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="675.0" layoutY="1563.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BASE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="base8" layoutX="674.0" layoutY="1566.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="820.0" layoutY="1563.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRATTENUTE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="trattenute8" layoutX="819.0" layoutY="1566.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="959.0" layoutY="1563.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COMPETENZE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="competenze8" layoutX="958.0" layoutY="1566.0" prefHeight="29.0" prefWidth="108.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Separator layoutY="1626.0" prefHeight="12.0" prefWidth="1182.0" />
+                              <Separator layoutY="1656.0" prefHeight="12.0" prefWidth="1182.0" />
+                              <Text fill="#9a9a9a" layoutX="474.0" layoutY="1652.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONTRIBUTI - RETRIBUZIONE LORDA" textAlignment="CENTER" />
+                              <Text layoutX="37.0" layoutY="1680.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IMPONIBILE CONTRIBUTIVO">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="imponibileContributivo" layoutX="36.0" layoutY="1683.0" prefHeight="29.0" prefWidth="160.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="222.0" layoutY="1680.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IMPONIBILE CONTR. ARROT.">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="imponibileContrArrot" layoutX="221.0" layoutY="1683.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Separator layoutY="1740.0" prefHeight="12.0" prefWidth="1182.0" />
+                              <Separator layoutY="1770.0" prefHeight="12.0" prefWidth="1182.0" />
+                              <Text fill="#9a9a9a" layoutX="533.0" layoutY="1765.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VOCI CONTRIBUTI" textAlignment="CENTER" />
+                              <Text layoutX="37.0" layoutY="1794.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DESCRIZIONE CONTRIBUTO">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="descrizioneContributo1" layoutX="36.0" layoutY="1797.0" prefHeight="29.0" prefWidth="279.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="341.0" layoutY="1794.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ALIQ.">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="aliq1" layoutX="340.0" layoutY="1797.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="522.0" layoutY="1793.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IMPONIBILE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="imponibile1" layoutX="521.0" layoutY="1796.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="707.0" layoutY="1793.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IMPORTO">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="importo1" layoutX="706.0" layoutY="1796.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="37.0" layoutY="1846.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DESCRIZIONE CONTRIBUTO">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="descrizioneContributo2" layoutX="36.0" layoutY="1849.0" prefHeight="29.0" prefWidth="279.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="341.0" layoutY="1846.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ALIQ.">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="aliq2" layoutX="340.0" layoutY="1849.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="522.0" layoutY="1845.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IMPONIBILE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="imponibile2" layoutX="521.0" layoutY="1848.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="707.0" layoutY="1845.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IMPORTO">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="importo2" layoutX="706.0" layoutY="1848.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="37.0" layoutY="1898.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DESCRIZIONE CONTRIBUTO">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="descrizioneContributo3" layoutX="36.0" layoutY="1901.0" prefHeight="29.0" prefWidth="279.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="341.0" layoutY="1898.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ALIQ.">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="aliq3" layoutX="340.0" layoutY="1901.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="522.0" layoutY="1897.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IMPONIBILE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="imponibile3" layoutX="521.0" layoutY="1900.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="707.0" layoutY="1897.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IMPORTO">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="importo3" layoutX="706.0" layoutY="1900.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="37.0" layoutY="1950.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DESCRIZIONE CONTRIBUTO">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="descrizioneContributo4" layoutX="36.0" layoutY="1953.0" prefHeight="29.0" prefWidth="279.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="341.0" layoutY="1950.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ALIQ.">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="aliq4" layoutX="340.0" layoutY="1953.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="522.0" layoutY="1949.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IMPONIBILE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="imponibile4" layoutX="521.0" layoutY="1952.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="707.0" layoutY="1949.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IMPORTO">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="importo4" layoutX="706.0" layoutY="1952.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="37.0" layoutY="2001.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DESCRIZIONE CONTRIBUTO">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="descrizioneContributo5" layoutX="36.0" layoutY="2004.0" prefHeight="29.0" prefWidth="279.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="341.0" layoutY="2001.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ALIQ.">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="aliq5" layoutX="340.0" layoutY="2004.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="522.0" layoutY="2000.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IMPONIBILE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="imponibile5" layoutX="521.0" layoutY="2003.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="707.0" layoutY="2000.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IMPORTO">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="importo5" layoutX="706.0" layoutY="2003.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="37.0" layoutY="2053.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DESCRIZIONE CONTRIBUTO">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="descrizioneContributo6" layoutX="36.0" layoutY="2056.0" prefHeight="29.0" prefWidth="279.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="341.0" layoutY="2053.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ALIQ.">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="aliq6" layoutX="340.0" layoutY="2056.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="522.0" layoutY="2052.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IMPONIBILE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="imponibile6" layoutX="521.0" layoutY="2055.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="707.0" layoutY="2052.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IMPORTO">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="importo6" layoutX="706.0" layoutY="2055.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Separator layoutY="2124.0" prefHeight="12.0" prefWidth="1182.0" />
+                              <Separator layoutY="2154.0" prefHeight="12.0" prefWidth="1182.0" />
+                              <Text fill="#9a9a9a" layoutX="552.0" layoutY="2149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONTRIBUTI" textAlignment="CENTER" />
+                              <Text layoutX="37.0" layoutY="2178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INAIL: VOCI DI TARIFFA">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="inailVociTariffa" layoutX="36.0" layoutY="2181.0" prefHeight="29.0" prefWidth="160.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="222.0" layoutY="2178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTALE CONTRIBUTI">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="totaleContributi" layoutX="221.0" layoutY="2181.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Separator layoutY="2236.0" prefHeight="12.0" prefWidth="1182.0" />
+                              <Separator layoutY="2266.0" prefHeight="12.0" prefWidth="1182.0" />
+                              <Text fill="#9a9a9a" layoutX="537.0" layoutY="2261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COMUNICAZIONI" textAlignment="CENTER" />
+                              <Separator layoutY="2490.0" prefHeight="12.0" prefWidth="1182.0" />
+                              <Separator layoutY="2520.0" prefHeight="12.0" prefWidth="1182.0" />
+                              <Text fill="#9a9a9a" layoutX="579.0" layoutY="2515.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TFR" textAlignment="CENTER" />
+                              <Text layoutX="37.0" layoutY="2544.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IMPON. LORDO">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="imponLordoTFR" layoutX="36.0" layoutY="2547.0" prefHeight="29.0" prefWidth="160.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="222.0" layoutY="2544.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RIDUZIONE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="riduzioneTFR" layoutX="221.0" layoutY="2547.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="404.0" layoutY="2544.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IMPON. NETTO">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="imponNettoTFR" layoutX="403.0" layoutY="2547.0" prefHeight="29.0" prefWidth="183.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="613.0" layoutY="2544.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\%">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="percentualeTFR" layoutX="612.0" layoutY="2547.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Separator layoutY="2603.0" prefHeight="12.0" prefWidth="1182.0" />
+                              <Separator layoutY="2633.0" prefHeight="12.0" prefWidth="1182.0" />
+                              <Text fill="#9a9a9a" layoutX="522.0" layoutY="2628.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RETRIBUZIONE NETTA" textAlignment="CENTER" />
+                              <Text layoutX="37.0" layoutY="2657.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTALE COMPETENZE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="totaleCompetenze" layoutX="36.0" layoutY="2660.0" prefHeight="29.0" prefWidth="160.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="222.0" layoutY="2657.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTALE TRATTENUTE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="totaleTrattenute" layoutX="221.0" layoutY="2660.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="403.0" layoutY="2656.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ARR. PRECEDENTE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="arrPrecedente" layoutX="402.0" layoutY="2659.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="588.0" layoutY="2656.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ARR. ATTUALE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="arrAttuale" layoutX="587.0" layoutY="2659.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="771.0" layoutY="2656.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NETTO IN BUSTA">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="nettoInBusta" layoutX="770.0" layoutY="2659.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="40.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOME AZIENDA">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="nomeAzienda" layoutX="39.0" layoutY="95.0" prefHeight="29.0" prefWidth="228.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="298.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INDIRIZZO">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="indirizzoDitta" layoutX="297.0" layoutY="95.0" prefHeight="29.0" prefWidth="225.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="708.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COMUNE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="comuneDitta" layoutX="707.0" layoutY="95.0" prefHeight="29.0" prefWidth="173.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="548.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CAP">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="capDitta" layoutX="547.0" layoutY="95.0" prefHeight="29.0" prefWidth="130.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="907.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROVINCIA">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="provinciaDitta" layoutX="906.0" layoutY="95.0" prefHeight="29.0" prefWidth="173.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <TextArea fx:id="comunicazioni" layoutX="17.0" layoutY="2285.0" prefHeight="175.0" prefWidth="1150.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextArea>
+                              
+                              <JFXCheckBox fx:id="c1" layoutX="1083.0" layoutY="1209.0" text="C" />
+                              <JFXCheckBox fx:id="n1" layoutX="1132.0" layoutY="1209.0" text="N" />
+                              <JFXCheckBox fx:id="c2" layoutX="1083.0" layoutY="1261.0" text="C" />
+                              <JFXCheckBox fx:id="n2" layoutX="1132.0" layoutY="1261.0" text="N" />
+                              <JFXCheckBox fx:id="c3" layoutX="1083.0" layoutY="1312.0" text="C" />
+                              <JFXCheckBox fx:id="n3" layoutX="1132.0" layoutY="1312.0" text="N" />
+                              <JFXCheckBox fx:id="c4" layoutX="1083.0" layoutY="1365.0" text="C" />
+                              <JFXCheckBox fx:id="n4" layoutX="1132.0" layoutY="1365.0" text="N" />
+                              <JFXCheckBox fx:id="c5" layoutX="1083.0" layoutY="1415.0" text="C" />
+                              <JFXCheckBox fx:id="n5" layoutX="1132.0" layoutY="1415.0" text="N" />
+                              <JFXCheckBox fx:id="c6" layoutX="1083.0" layoutY="1468.0" text="C" />
+                              <JFXCheckBox fx:id="n6" layoutX="1132.0" layoutY="1468.0" text="N" />
+                              <JFXCheckBox fx:id="c7" layoutX="1083.0" layoutY="1518.0" text="C" />
+                              <JFXCheckBox fx:id="n7" layoutX="1132.0" layoutY="1518.0" text="N" />
+                              <JFXCheckBox fx:id="c8" layoutX="1083.0" layoutY="1571.0" text="C" />
+                              <JFXCheckBox fx:id="n8" layoutX="1132.0" layoutY="1571.0" text="N" />
+                              <Text layoutX="403.0" layoutY="1680.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTALE SPETTANTE">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="totaleSpettante" layoutX="402.0" layoutY="1683.0" prefHeight="29.0" prefWidth="154.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="meseRetribuzione" layoutX="540.0" layoutY="43.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="50.0" prefWidth="800.0" />
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <HBox prefHeight="50.0" prefWidth="800.0" style="-fx-border-color: #a1a1a1; -fx-border-width: 0 0 2 0;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text layoutX="39.0" layoutY="8.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" y="20.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="15.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="usernameDipendente" layoutX="5.0" strokeType="OUTSIDE" strokeWidth="0.0" x="105.0" y="20.0" AnchorPane.topAnchor="15.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Circle fx:id="timbro" fill="#01ab00" layoutX="15.0" layoutY="23.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="17.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+   </top>
+      <fx:define>
+        <ArrayList fx:id="c">
+            <fx:reference source="c1" />
+            <fx:reference source="c2" />
+            <fx:reference source="c3" />
+            <fx:reference source="c4" />
+            <fx:reference source="c5" />
+            <fx:reference source="c6" />
+            <fx:reference source="c7" />
+            <fx:reference source="c8" />
+        </ArrayList>
+    </fx:define>
+    <fx:define>
+        <ArrayList fx:id="n">
+            <fx:reference source="n1" />
+            <fx:reference source="n2" />
+            <fx:reference source="n3" />
+            <fx:reference source="n4" />
+            <fx:reference source="n5" />
+            <fx:reference source="n6" />
+            <fx:reference source="n7" />
+            <fx:reference source="n8" />
+        </ArrayList>
+    </fx:define>
+    <fx:define>
+        <ArrayList fx:id="trattenute">
+            <fx:reference source="trattenute1" />
+            <fx:reference source="trattenute2" />
+            <fx:reference source="trattenute3" />
+            <fx:reference source="trattenute4" />
+            <fx:reference source="trattenute5" />
+            <fx:reference source="trattenute6" />
+            <fx:reference source="trattenute7" />
+            <fx:reference source="trattenute8" />
+        </ArrayList>
+    </fx:define>
+    <fx:define>
+        <ArrayList fx:id="competenze">
+            <fx:reference source="competenze1" />
+            <fx:reference source="competenze2" />
+            <fx:reference source="competenze3" />
+            <fx:reference source="competenze4" />
+            <fx:reference source="competenze5" />
+            <fx:reference source="competenze6" />
+            <fx:reference source="competenze7" />
+            <fx:reference source="competenze8" />
+        </ArrayList>
+    </fx:define>
+    <fx:define>
+        <ArrayList fx:id="aliq">
+            <fx:reference source="aliq1" />
+            <fx:reference source="aliq2" />
+            <fx:reference source="aliq3" />
+            <fx:reference source="aliq4" />
+            <fx:reference source="aliq5" />
+            <fx:reference source="aliq6" />
+        </ArrayList>
+    </fx:define>
+    <fx:define>
+        <ArrayList fx:id="imponibile">
+            <fx:reference source="imponibile1" />
+            <fx:reference source="imponibile2" />
+            <fx:reference source="imponibile3" />
+            <fx:reference source="imponibile4" />
+            <fx:reference source="imponibile5" />
+            <fx:reference source="imponibile6" />
+        </ArrayList>
+    </fx:define>
+    <fx:define>
+        <ArrayList fx:id="importo">
+            <fx:reference source="importo1" />
+            <fx:reference source="importo2" />
+            <fx:reference source="importo3" />
+            <fx:reference source="importo4" />
+            <fx:reference source="importo5" />
+            <fx:reference source="importo6" />
+        </ArrayList>
+    </fx:define>
+</BorderPane>

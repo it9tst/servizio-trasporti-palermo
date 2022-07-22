@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.lynden.gmapsfx.GoogleMapView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="root" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9.0.4">
+   <top>
+      <HBox prefHeight="50.0" prefWidth="800.0" style="-fx-border-width: 0 0 2 0; -fx-border-color: #a1a1a1;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" y="20.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="15.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="usernameDipendente" layoutX="5.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" x="105.0" y="20.0" AnchorPane.topAnchor="15.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Circle fx:id="timbro" fill="#01ab00" layoutX="17.0" layoutY="24.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="17.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="38.0" prefWidth="102.0" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="80.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="salvaButton" alignment="CENTER_RIGHT" buttonType="RAISED" contentDisplay="RIGHT" onAction="#salvaFermata" style="-fx-background-color: #f0f0f0;" text="Aggiungi" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="annullaButton" alignment="CENTER_RIGHT" buttonType="RAISED" contentDisplay="RIGHT" layoutX="10.0" layoutY="10.0" onAction="#annulla" style="-fx-background-color: #f0f0f0;" text="Annulla" AnchorPane.rightAnchor="145.0" AnchorPane.topAnchor="20.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+         </children></AnchorPane>
+   </bottom>
+   <center>
+      <AnchorPane fx:id="parentStackPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="470.0" prefWidth="800.0">
+               <children>
+                  <AnchorPane prefHeight="470.0" prefWidth="400.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Text layoutX="47.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Indirizzo:" textAlignment="RIGHT" wrappingWidth="77.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Text>
+                        <TextField fx:id="via" layoutX="131.0" layoutY="22.0" prefHeight="29.0" prefWidth="280.0" promptText="Es. Via Roma">
+                           <font>
+                              <Font size="15.0" />
+                           </font></TextField>
+                        <Text layoutX="439.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numero Civico:" textAlignment="RIGHT" wrappingWidth="115.20001220703125">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Text>
+                        <TextField fx:id="civico" layoutX="562.0" layoutY="22.0" prefHeight="29.0" prefWidth="80.0" promptText="Es. 30">
+                           <font>
+                              <Font size="15.0" />
+                           </font></TextField>
+                        <JFXButton buttonType="RAISED" layoutX="680.0" layoutY="23.0" onAction="#centerMap" style="-fx-background-color: #f0f0f0;" text="Centra" />
+                        <AnchorPane fx:id="mapsConteiner" layoutX="282.0" layoutY="198.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                           <children>
+                              <GoogleMapView fx:id="mapView" style="-fx-border-color: #c1c1c1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="0.0" />
+                           </children></AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

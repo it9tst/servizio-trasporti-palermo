@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER" maxHeight="200.0" maxWidth="800.0" minHeight="200.0" minWidth="800.0" prefHeight="200.0" prefWidth="800.0" spacing="100.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="100.0" prefWidth="150.0">
+         <padding>
+            <Insets bottom="100.0" />
+         </padding>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+         <children>
+            <JFXButton fx:id="gestioneLineeButton" alignment="BOTTOM_CENTER" buttonType="RAISED" onAction="#gestioneLinee" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: #f0f0f0;" text="Gestione Linee">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXButton>
+            <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="40.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/img/gestioneLinee.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="100.0" prefWidth="150.0">
+         <padding>
+            <Insets bottom="100.0" />
+         </padding>
+         <children>
+            <JFXButton fx:id="associaLineaButton" alignment="BOTTOM_CENTER" buttonType="RAISED" onAction="#associaLinea" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: #f0f0f0;" text="Assegna Linea" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="40.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/img/gestioneTurni.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="100.0" prefWidth="150.0">
+         <padding>
+            <Insets bottom="100.0" />
+         </padding>
+         <children>
+            <JFXButton fx:id="gestioneFermateButton" alignment="BOTTOM_CENTER" buttonType="RAISED" onAction="#gestioneFermate" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: #f0f0f0;" text="Gestione Fermate" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXButton>
+            <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="40.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/img/gestioneFermate.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

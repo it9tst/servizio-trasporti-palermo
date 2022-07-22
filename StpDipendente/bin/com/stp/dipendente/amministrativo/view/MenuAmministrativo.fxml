@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox alignment="CENTER" maxHeight="200.0" maxWidth="800.0" minHeight="200.0" minWidth="800.0" prefHeight="200.0" prefWidth="800.0" spacing="100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="100.0" prefWidth="150.0">
+         <padding>
+            <Insets bottom="100.0" />
+         </padding>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+         <children>
+            <JFXButton fx:id="gestionePersonaleButton" alignment="BOTTOM_CENTER" buttonType="RAISED" onAction="#gestionePersonale" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: #f0f0f0;" text="Gestione Personale">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXButton>
+            <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="40.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/img/gestionePersonale.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="100.0" prefWidth="150.0">
+         <padding>
+            <Insets bottom="100.0" />
+         </padding>
+         <children>
+            <JFXButton fx:id="gestioneTurniButton" alignment="BOTTOM_CENTER" buttonType="RAISED" onAction="#gestioneTurni" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: #f0f0f0;" text="Gestione Turni" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXButton>
+            <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="40.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/img/gestioneTurni.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="100.0" prefWidth="150.0">
+         <children>
+            <JFXButton fx:id="compilaStipendioButton" alignment="BOTTOM_CENTER" buttonType="RAISED" onAction="#compilaStipendio" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: #f0f0f0;" text="Compila Stipendio" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXButton>
+            <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="40.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/img/compilaStipendio.png" />
+               </image>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets bottom="100.0" />
+         </padding>
+      </AnchorPane>
+   </children>
+</HBox>
