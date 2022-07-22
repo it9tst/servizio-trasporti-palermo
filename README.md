@@ -1,11 +1,11 @@
-# servizio-trasporti-palermo
+# Servizio Trasporti Palermo
 
 ### Final Project for exam of Software Engineering T - Ing. Informatica - UniPA 2018
 
-[``Project Theme``](https://github.com/it9tst/servizio-trasporti-palermo/blob/main/specifiche/Tesina1718.pdf)<br />
 Design and development of a management software for a public transport company. (Server-Client)<br />
 Management of the software development cycle through UML.<br />
-Technologies used: Java, JavaFX and MySQL.
+Technologies used: Java, JavaFX and MySQL.<br />
+[``Project Theme``](https://github.com/it9tst/servizio-trasporti-palermo/blob/main/specifiche/Tesina1718.pdf)
 
 ### Documentation
 
