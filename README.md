@@ -2,16 +2,16 @@
 
 ### Final Project for exam of Software Engineering T - Ing. Informatica - UniPA 2018
 
-[``Project Theme``](https://github.com/it9tst/servizio-trasporti-palermo/blob/main/specifiche/Tesina1718.pdf)
-Design and development of a management software for a public transport company. (Server-Client)
-Management of the software development cycle through UML.
+[``Project Theme``](https://github.com/it9tst/servizio-trasporti-palermo/blob/main/specifiche/Tesina1718.pdf)<br />
+Design and development of a management software for a public transport company. (Server-Client)<br />
+Management of the software development cycle through UML.<br />
 Technologies used: Java, JavaFX and MySQL.
 
 ### Documentation
 
-[``Protocollo``](https://github.com/it9tst/servizio-trasporti-palermo/blob/main/doc/Protocollo.pdf)
-[``Requirements Analysis Document``](https://github.com/it9tst/servizio-trasporti-palermo/blob/main/doc/RAD.pdf)
-[``System Desing Document``](https://github.com/it9tst/servizio-trasporti-palermo/blob/main/doc/SDD.pdf)
+[``Protocollo``](https://github.com/it9tst/servizio-trasporti-palermo/blob/main/doc/Protocollo.pdf)<br />
+[``Requirements Analysis Document``](https://github.com/it9tst/servizio-trasporti-palermo/blob/main/doc/RAD.pdf)<br />
+[``System Desing Document``](https://github.com/it9tst/servizio-trasporti-palermo/blob/main/doc/SDD.pdf)<br />
 [``Object Design Document``](https://github.com/it9tst/servizio-trasporti-palermo/blob/main/doc/ODD.pdf)
 
 ### Requirements
