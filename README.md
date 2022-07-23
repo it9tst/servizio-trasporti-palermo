@@ -9,10 +9,10 @@ Technologies used: Java, JavaFX and MySQL.<br />
 
 ### Documentation
 
-[``Protocollo``](https://github.com/it9tst/servizio-trasporti-palermo/blob/main/doc/Protocollo.pdf)<br />
-[``Requirements Analysis Document``](https://github.com/it9tst/servizio-trasporti-palermo/blob/main/doc/RAD.pdf)<br />
-[``System Desing Document``](https://github.com/it9tst/servizio-trasporti-palermo/blob/main/doc/SDD.pdf)<br />
-[``Object Design Document``](https://github.com/it9tst/servizio-trasporti-palermo/blob/main/doc/ODD.pdf)
+- [``Protocollo``](https://github.com/it9tst/servizio-trasporti-palermo/blob/main/doc/Protocollo.pdf)
+- [``Requirements Analysis Document``](https://github.com/it9tst/servizio-trasporti-palermo/blob/main/doc/RAD.pdf)
+- [``System Desing Document``](https://github.com/it9tst/servizio-trasporti-palermo/blob/main/doc/SDD.pdf)
+- [``Object Design Document``](https://github.com/it9tst/servizio-trasporti-palermo/blob/main/doc/ODD.pdf)
 
 ### Requirements
 
@@ -31,3 +31,11 @@ There are two applications and you can find the code at the top right.
 Emanuele Di Miceli
 [Fabio Palmese](https://github.com/fpalmese)
 [Gabriele Tornatore](https://github.com/it9tst)
+
+### License
+
+The source code for the site is licensed under the MIT license, which you can find in
+the LICENSE.md file.
+
+All graphical assets are licensed under the
+[Creative Commons Attribution 3.0 Unported License](https://creativecommons.org/licenses/by/3.0/).
