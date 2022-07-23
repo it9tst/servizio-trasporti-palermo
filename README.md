@@ -17,7 +17,8 @@ Technologies used: Java, JavaFX and MySQL.<br />
 ### Requirements
 
 - Java 1.8.0
-<br />Linux, Windows and MacOS environments should both work.
+
+Linux, Windows and MacOS environments should both work.
 
 ### Applications
 
